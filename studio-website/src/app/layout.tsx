@@ -2,6 +2,9 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Work_Sans, Open_Sans } from "next/font/google"
 import "./globals.css"
+import { AnimatedNavbar } from "@/components/animated-navbar"  // ✅ import your navbar
+import { Footer3D } from "@/components/footer-3d"
+import { Background3D } from "@/components/background-3d"
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -30,7 +33,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${workSans.variable} ${openSans.variable} antialiased dark`}>{children}</body>
+      <body className={`${workSans.variable} ${openSans.variable} antialiased dark`}>
+        {/* ✅ Navbar will now be present on all pages */}
+        <Background3D/>
+        <AnimatedNavbar />
+        {children}
+        <Footer3D/>
+      </body>
     </html>
   )
 }

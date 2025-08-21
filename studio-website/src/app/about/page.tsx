@@ -1,13 +1,11 @@
 "use client"
 
+import { AboutSection } from "@/components/about-section"
 import { Background3D } from "@/components/background-3d"
-import { HeroSection } from "@/components/hero-section"
-
-export default function HomePage() {
+export default function AboutPage() {
   return (
     <main className="relative min-h-screen">
-      <Background3D />
-      <HeroSection />
+      <AboutSection />
     </main>
   )
 }
