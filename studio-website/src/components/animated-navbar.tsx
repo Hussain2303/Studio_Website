@@ -24,7 +24,6 @@ export function AnimatedNavbar() {
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "InnerServices", href: "/InnerService" },
-    { name: "Contact", href: "/contact" },
   ]
 
   return (

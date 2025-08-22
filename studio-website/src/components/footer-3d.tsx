@@ -3,6 +3,7 @@
 import { useRef } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 function FooterGeometry() {
   const meshRef = useRef<any>()
@@ -43,6 +44,13 @@ function FooterGeometry() {
 }
 
 export function Footer3D() {
+  const footerLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "InnerServices", href: "/InnerService" },
+  ]
+
   return (
     <motion.footer
       className="relative border-t border-primary/20 py-16 overflow-hidden"
@@ -84,18 +92,19 @@ export function Footer3D() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
             <h3 className="text-lg font-semibold text-foreground mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {["Home", "About", "Services", "Portfolio", "Contact"].map((item, index) => (
-                <motion.li key={item}>
-                  <motion.a
-                    href={`#${item.toLowerCase()}`}
-                    className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
-                    whileHover={{ x: 5, color: "#ff4d00" }}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.4 + index * 0.1 }}
-                  >
-                    {item}
-                  </motion.a>
+              {footerLinks.map((item, index) => (
+                <motion.li key={item.name}>
+                  <Link href={item.href} passHref>
+                    <motion.span
+                      className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                      whileHover={{ x: 5, color: "#ff4d00" }}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.4 + index * 0.1 }}
+                    >
+                      {item.name}
+                    </motion.span>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
@@ -107,7 +116,7 @@ export function Footer3D() {
             <div className="space-y-2 text-muted-foreground">
               <motion.p whileHover={{ color: "#ff4d00", x: 5 }}>hello@studio.com</motion.p>
               <motion.p whileHover={{ color: "#ff4d00", x: 5 }}>+1 (555) 123-4567</motion.p>
-              <motion.p whileHover={{ color: "#ff4d00", x: 5 }}>New York, NY</motion.p>
+              <motion.p whileHover={{ color: "#ff4d00", x: 5 }}>Lahore,Pakistan</motion.p>
             </div>
           </motion.div>
         </div>
@@ -120,7 +129,7 @@ export function Footer3D() {
           transition={{ delay: 0.6 }}
         >
           <motion.div className="text-muted-foreground font-serif mb-4 md:mb-0" whileHover={{ color: "#ff4d00" }}>
-            © 2024 Studio. All rights reserved.
+            © 2024 KoKo Studio. All rights reserved.
           </motion.div>
           <div className="flex space-x-6">
             {["Privacy", "Terms", "Cookies"].map((item, index) => (
