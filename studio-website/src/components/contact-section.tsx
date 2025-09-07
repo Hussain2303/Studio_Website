@@ -22,7 +22,7 @@ export function ContactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold font-sans mb-6">
-            Let's <span className="text-primary">Connect</span>
+            Let&apos;s <span className="text-primary">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-serif">
             Ready to start your next project? Reach us directly through our contact details below.
@@ -41,7 +41,7 @@ export function ContactSection() {
             <div>
               <h3 className="text-2xl font-bold font-sans mb-6">Get in Touch</h3>
               <p className="text-muted-foreground font-serif leading-relaxed mb-8">
-                We'd love to hear from you. Whether it's a new project, collaboration, or just to say hello — connect with us below.
+                We&apos;d love to hear from you. Whether it&apos;s a new project, collaboration, or just to say hello — connect with us below.
               </p>
             </div>
 

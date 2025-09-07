@@ -60,7 +60,7 @@ export default function PerformanceMarketing() {
     },
     {
       title: "Launch, Monitor & Optimize",
-      desc: "We run, monitor, and continuously optimize campaigns to improve ROI, using real-time data to scale what works and cut what doesn’t.",
+      desc: "We run, monitor, and continuously optimize campaigns to improve ROI, using real-time data to scale what works and cut what doesn&apos;t.",
     },
   ]
 
@@ -113,7 +113,7 @@ export default function PerformanceMarketing() {
           >
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">01. Intro service</h2>
             <p className="text-white/80 leading-relaxed">
-              At <span className="text-yellow-400 font-semibold">Koko Studio</span>, we don’t just run ads, we deliver measurable results. 
+              At <span className="text-yellow-400 font-semibold">Koko Studio</span>, we don&apos;t just run ads, we deliver measurable results. 
               Our performance marketing strategies are built to drive conversions, increase ROI, 
               and grow your brand with precision. Every campaign is data-backed, goal-focused, 
               and designed to scale what works.
@@ -143,7 +143,7 @@ export default function PerformanceMarketing() {
             <p className="text-white/80 leading-relaxed">
               We run performance marketing that delivers real results. From strategy and scroll-stopping ad creatives 
               to audience targeting, A/B testing, and real-time optimization, we make every ad count. 
-              Whether it's Meta, Google, or TikTok, we focus on clicks, conversions, and measurable ROI.
+              Whether it&apos;s Meta, Google, or TikTok, we focus on clicks, conversions, and measurable ROI.
             </p>
           </motion.div>
           <motion.div

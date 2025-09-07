@@ -51,7 +51,7 @@ export default function ContentCreation() {
     },
     {
       title: "Strategy & Planning",
-      desc: "Our team outlines a content plan with themes, formats, and timelines — all tailored to your brand’s needs.",
+      desc: "Our team outlines a content plan with themes, formats, and timelines — all tailored to your brand's needs.",
     },
     {
       title: "Creation & Delivery",

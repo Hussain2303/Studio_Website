@@ -23,20 +23,20 @@ export function AboutSection() {
               About <span className="text-primary">Koko Studio</span>
             </h2>
             <p className="text-xl font-semibold text-muted-foreground mb-6 font-serif leading-relaxed italic">
-              We Inspire Beliefs n’ Souls
+              We Inspire Beliefs n&apos; Souls
             </p>
 
             <p className="text-lg text-muted-foreground mb-6 font-serif leading-relaxed">
               Koko Studio is a 360° digital marketing and branding agency specializing in creative solutions tailored
-              to your unique needs. We’re not just service providers; we’re storytellers, dedicated to connecting your
+              to your unique needs. We&apos;re not just service providers; we&apos;re storytellers, dedicated to connecting your
               brand with your audience and customers in meaningful ways.
             </p>
 
             <h3 className="text-xl font-bold mb-2">Vision Statement:</h3>
             <p className="text-lg text-muted-foreground mb-6 font-serif leading-relaxed">
               To be recognized for our groundbreaking creativity and innovative approaches that bring brands to life in
-              unforgettable ways. We envision a world where brands aren’t just businesses but meaningful experiences
-              that leave lasting impressions on people’s hearts and minds.
+              unforgettable ways. We envision a world where brands aren&apos;t just businesses but meaningful experiences
+              that leave lasting impressions on people&apos;s hearts and minds.
             </p>
 
             <h3 className="text-xl font-bold mb-2">Mission Statement:</h3>
@@ -103,21 +103,21 @@ export function AboutSection() {
             <div>
               <h4 className="font-semibold text-primary mb-2">More Than Just a Logo</h4>
               <p>
-                At Koko Studio, we create identities, build brands, and get results based on our clients' strategic aspirations.
+                At Koko Studio, we create identities, build brands, and get results based on our clients&apos; strategic aspirations.
                 We go beyond visuals and ensure your brand becomes a living, breathing identity.
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-primary mb-2">Brands with Soul</h4>
               <p>
-                We don’t just build brands – we create stories that connect emotionally. Every brand we work with is designed
+                We don&apos;t just build brands – we create stories that connect emotionally. Every brand we work with is designed
                 to inspire loyalty and build long-lasting relationships with people.
               </p>
             </div>
             <div>
               <h4 className="font-semibold text-primary mb-2">Tell Your Story, The Right Way</h4>
               <p>
-                Great brands don’t just sell – they speak, evolve, and bring people together. We help build those narratives
+                Great brands don&apos;t just sell – they speak, evolve, and bring people together. We help build those narratives
                 and ensure your message is heard in the right way, at the right time.
               </p>
             </div>

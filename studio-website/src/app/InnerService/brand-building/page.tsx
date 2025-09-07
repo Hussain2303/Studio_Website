@@ -118,8 +118,8 @@ export default function BrandBuilding() {
             className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-xl"
           >
             <p className="text-white/80 leading-relaxed">
-              Your brand is more than just a logo; it’s the way people feel when they interact with your business.
-              It’s your voice, your values, and the lasting impression you leave behind. At{" "}
+              Your brand is more than just a logo; it&apos;s the way people feel when they interact with your business.
+              It&apos;s your voice, your values, and the lasting impression you leave behind. At{" "}
               <span className="text-primary font-semibold">Koko Studio</span>, we help you build a brand that speaks
               clearly, connects deeply, and stands out consistently.
             </p>
@@ -146,7 +146,7 @@ export default function BrandBuilding() {
           >
             <p className="text-white/80 leading-relaxed">
               We work closely with you to uncover what makes your brand unique, then bring it to life through
-              strategy, design, and storytelling. Whether you're starting from scratch or looking to reposition,
+              strategy, design, and storytelling. Whether you&apos;re starting from scratch or looking to reposition,
               we make sure every element feels authentic, aligned, and built to grow.
             </p>
           </motion.div>

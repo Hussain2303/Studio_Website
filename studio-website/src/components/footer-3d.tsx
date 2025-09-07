@@ -3,12 +3,13 @@
 import { useRef } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { motion } from "framer-motion"
+import * as THREE from "three"
 import Link from "next/link"
 
 function FooterGeometry() {
-  const meshRef = useRef<any>()
-  const mesh2Ref = useRef<any>()
-  const mesh3Ref = useRef<any>()
+const meshRef = useRef<THREE.Mesh | null>(null)
+const mesh2Ref = useRef<THREE.Mesh | null>(null)
+const mesh3Ref = useRef<THREE.Mesh | null>(null)
 
   useFrame((state) => {
     if (meshRef.current) {

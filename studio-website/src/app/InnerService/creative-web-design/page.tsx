@@ -115,7 +115,7 @@ export default function CreativeWebDesigns() {
             <p className="text-white/80 leading-relaxed">
               Your website is often the first impression your audience gets; make it count. At{" "}
               <span className="text-cyan-400 font-semibold">Koko Studio</span>, we design visually stunning,
-              user-friendly websites that don’t just look good but also perform. We combine creativity with
+              user-friendly websites that don&apos;t just look good but also perform. We combine creativity with
               functionality to build experiences that reflect your brand and convert visitors into customers.
             </p>
           </motion.div>

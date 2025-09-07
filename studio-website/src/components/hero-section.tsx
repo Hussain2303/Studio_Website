@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-12 text-white mt-24">
+   <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 py-12 text-white mt-24">
       {/* Intro */}
       <motion.h1
         className="text-4xl md:text-6xl font-extrabold mb-4"
@@ -12,7 +12,7 @@ export function HeroSection() {
         transition={{ duration: 0.8 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        Hello People! We're <span className="text-purple-400">Koko Studio</span>
+        Hello People! We&apos;re <span className="text-purple-400">Koko Studio</span>
       </motion.h1>
 
       <motion.p
@@ -22,7 +22,7 @@ export function HeroSection() {
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        We Inspire Beliefs n’ Souls  
+        We Inspire Beliefs n&apos; Souls  
         <br />
         From strategies to storytelling, Koko Studio delivers 360° digital solutions that connect your brand with its rightful audience.
       </motion.p>

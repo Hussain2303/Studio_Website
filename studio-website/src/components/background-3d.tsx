@@ -2,47 +2,57 @@
 
 import { useRef, useEffect, useState } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
-import { Points, PointMaterial } from "@react-three/drei"
-import * as random from "maath/random"
-import type * as THREE from "three"
+import { inSphere } from "maath/random"
+import { PointMaterial } from "@react-three/drei"
+import * as THREE from "three"
 
-function Stars(props: any) {
-  const ref = useRef<THREE.Points>(null)
-  const [sphere, setSphere] = useState<Float32Array | null>(null)
+function Stars() {
+  const groupRef = useRef<THREE.Group | null>(null)
+  const [positions, setPositions] = useState<THREE.BufferAttribute | null>(null)
 
   useEffect(() => {
-    const positions = new Float32Array(5000 * 3)
-    const tempSphere = random.inSphere(positions, { radius: 1.5 })
+    const arr = new Float32Array(5000 * 3)
+    inSphere(arr, { radius: 1.5 })
 
-    for (let i = 0; i < positions.length; i++) {
-      if (isNaN(positions[i]) || !isFinite(positions[i])) {
-        positions[i] = ((i % 1000) / 1000 - 0.5) * 3
+    for (let i = 0; i < arr.length; i++) {
+      if (isNaN(arr[i]) || !isFinite(arr[i])) {
+        arr[i] = ((i % 1000) / 1000 - 0.5) * 3
       }
     }
 
-    setSphere(tempSphere)
+    setPositions(new THREE.Float32BufferAttribute(arr, 3))
   }, [])
 
-  useFrame((state, delta) => {
-    if (ref.current) {
-      ref.current.rotation.x -= delta / 10
-      ref.current.rotation.y -= delta / 15
+  useFrame((_, delta) => {
+    if (groupRef.current) {
+      groupRef.current.rotation.x -= delta / 10
+      groupRef.current.rotation.y -= delta / 15
     }
   })
 
-  if (!sphere) return null
+  if (!positions) return null
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
-        <PointMaterial transparent color="#ff4d00" size={0.005} sizeAttenuation={true} depthWrite={false} />
-      </Points>
+    <group ref={groupRef} rotation={[0, 0, Math.PI / 4]}>
+      <points frustumCulled={false}>
+        <bufferGeometry>
+          <primitive attach="attributes-position" object={positions} />
+        </bufferGeometry>
+        {/* ✅ Use PointMaterial from drei for round glowing points */}
+        <PointMaterial
+          transparent
+          color="#ffffff" // cream/white color
+          size={0.005}
+          sizeAttenuation
+          depthWrite={false}
+        />
+      </points>
     </group>
   )
 }
 
 function FloatingGeometry() {
-  const meshRef = useRef<THREE.Mesh>(null)
+  const meshRef = useRef<THREE.Mesh | null>(null)
 
   useFrame((state) => {
     if (meshRef.current) {
@@ -63,13 +73,9 @@ function FloatingGeometry() {
 export function Background3D() {
   const [isMounted, setIsMounted] = useState(false)
 
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
+  useEffect(() => setIsMounted(true), [])
 
-  if (!isMounted) {
-    return <div className="fixed inset-0 -z-10 bg-background" />
-  }
+  if (!isMounted) return <div className="fixed inset-0 -z-10 bg-background" />
 
   return (
     <div className="fixed inset-0 -z-10">
